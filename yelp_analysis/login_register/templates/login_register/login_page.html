@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <title>Login Here!!!</title>
+</head>
+<body style="background: rgba(0,0,0,1)">
+<div style="height: 500px;width: 500px;background: white;margin: auto; margin-top: 10%; border-radius: 2%;padding: 3%">
+    <div class="row">
+        <center>
+            <a href="/home/homepage">
+                <img src="https://cdn.worldvectorlogo.com/logos/yelp-icon.svg" height="85px" style="margin-top: 7.5px">
+            </a>
+            <h3>Please sign in</h3></center>
+        <form role="form" method="post" action="/login_register/check_info" name="form2"
+              style="width: 85%;margin-left: 7%">
+            {% csrf_token %}
+
+            <div class="form-group">
+                <label for="name">&nbsp;Email</label>
+                <input type="text" class="form-control" id="email12" name="email" placeholder="Enter Email">
+            </div>
+
+            <div class="form-group">
+                <label for="inputfile">&nbsp;Password</label>
+                <input type="password" class="form-control" id="password12" name='pass'
+                       placeholder="Enter Password">
+            </div>
+            <center>
+                <button type="submit" class="btn btn-danger btn-lg" style="padding: 3% 15%">Log In
+                </button>
+                <br/><br/>
+                <p> Dont have account ? <a href="/login_register/register_page" style="color: red"> Register Here </a>
+                </p>
+            </center>
+        </form>
+    </div>
+    <div class="col-lg-3"></div>
+</div>
+
+</div>
+</body>
+</html>
